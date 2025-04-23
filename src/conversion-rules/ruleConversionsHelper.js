@@ -146,13 +146,6 @@ const mapAddressElementsToUnstructuredAddress = (addressElements, postTown, post
     convertedUnstructuredAddress.line5 = postTown;
     convertedUnstructuredAddress.postcode = postcode;
 
-    // Apply string formatting to each element of the unstructured address
-    Object.entries(convertedUnstructuredAddress).forEach(([key, value]) => {
-        if (value) {
-            convertedUnstructuredAddress[key] = value.toUpperCase();
-        }
-    });
-
     return convertedUnstructuredAddress;
 };
 
